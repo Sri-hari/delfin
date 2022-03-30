@@ -3,6 +3,7 @@
 [![codecov.io](https://codecov.io/github/sodafoundation/delfin/coverage.svg?branch=master)](https://codecov.io/github/sodafoundation/delfin?branch=master)
 [![Releases](https://img.shields.io/github/release/sodafoundation/delfin/all.svg?style=flat-square)](https://github.com/sodafoundation/delfin/releases)
 [![LICENSE](https://img.shields.io/github/license/sodafoundation/delfin.svg?style=flat-square)](https://github.com/sodafoundation/delfin/blob/master/LICENSE)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sri-hari_delfin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Sri-hari_delfin)
 
 <img src="https://sodafoundation.io/wp-content/uploads/2020/01/SODA_logo_outline_color_800x800.png" width="200" height="200">
 
