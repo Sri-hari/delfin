@@ -38,4 +38,4 @@ jobs:
           args: >
             -Dsonar.python.coverage.reportPath=/home/runner/work/delfin/delfin/coverage.xml
             -Dsonar.test.exclusions=delfin/tests/**
-            -Dsonar.verbose=true
+            -Dsonar.verbose=false
