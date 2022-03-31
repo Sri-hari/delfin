@@ -36,8 +36,6 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.organization=Sri-hari_delfin
-            -Dsonar.projectKey=sri-hari
             -Dsonar.python.coverage.reportPaths=/home/runner/work/delfin/delfin/coverage.xml
             -Dsonar.sources=lib/
             -Dsonar.test.exclusions=tests/**
