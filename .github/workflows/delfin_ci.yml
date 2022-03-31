@@ -31,4 +31,14 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: 25a61c169b0131a0ae98781dbf558c1ef66a46e9
-          SONAR_HOST_URL: https://sonarcloud.io
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectBaseDir: .
+          args: >
+            -Dsonar.organization=Sri-hari_delfin
+            -Dsonar.projectKey=sri-hari
+            -Dsonar.python.coverage.reportPaths=/home/runner/work/delfin/delfin/coverage.xml
+            -Dsonar.sources=lib/
+            -Dsonar.test.exclusions=tests/**
+            -Dsonar.tests=tests/
+            -Dsonar.verbose=true
