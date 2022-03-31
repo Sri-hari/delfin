@@ -27,3 +27,8 @@ jobs:
         run: tox
       - name: Test coverage with  codecov
         run: codecov
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
+        env:
+          SONAR_TOKEN: 25a61c169b0131a0ae98781dbf558c1ef66a46e9
+          SONAR_HOST_URL: https://sonarcloud.io
