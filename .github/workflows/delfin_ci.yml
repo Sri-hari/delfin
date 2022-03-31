@@ -37,6 +37,5 @@ jobs:
           projectBaseDir: .
           args: >
             -Dsonar.python.coverage.reportPaths=/home/runner/work/delfin/delfin/coverage.xml
-            -Dsonar.sources=lib/
-            -Dsonar.test.exclusions=tests/**
+            -Dsonar.test.exclusions=delfin/tests/**
             -Dsonar.verbose=true
