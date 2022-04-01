@@ -39,3 +39,25 @@ jobs:
             -Dsonar.python.coverage.reportPath=/home/runner/work/delfin/delfin/coverage.xml
             -Dsonar.test.exclusions=delfin/tests/**
             -Dsonar.verbose=false
+      - uses: jpmcb/prow-github-actions@v1
+        with:
+          prow-commands: /assign 
+            /unassign 
+            /approve 
+            /retitle 
+            /area 
+            /kind 
+            /priority 
+            /remove 
+            /lgtm 
+            /close 
+            /reopen 
+            /lock 
+            /milestone 
+            /hold 
+            /cc 
+            /uncc
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: actions/labeler@main
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
