@@ -39,7 +39,7 @@ jobs:
             -Dsonar.python.coverage.reportPath=/home/runner/work/delfin/delfin/coverage.xml
             -Dsonar.test.exclusions=delfin/tests/**
             -Dsonar.verbose=false
-      - uses: jpmcb/prow-github-actions@v1
+      - uses: jpmcb/prow-github-actions@v1.1.3
         with:
           prow-commands: /assign 
             /unassign 
