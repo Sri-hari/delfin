@@ -41,7 +41,7 @@ jobs:
             -Dsonar.verbose=false
       - uses: jpmcb/prow-github-actions@v1.1.3
         with:
-          prow-commands: /assign 
+          prow-commands: '/assign 
             /unassign 
             /approve 
             /retitle 
@@ -56,7 +56,7 @@ jobs:
             /milestone 
             /hold 
             /cc 
-            /uncc
+            /uncc'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - uses: actions/labeler@main
         with:
