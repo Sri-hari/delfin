@@ -27,18 +27,11 @@ jobs:
         run: tox
       - name: Test coverage with  codecov
         run: codecov
-      - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: c6a1ff632d5d73b5fe921263c6f2bd212936de30
-          SONAR_HOST_URL: https://sonarcloud.io
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          projectBaseDir: .
-          args: >
-            -Dsonar.python.coverage.reportPath=/home/runner/work/delfin/delfin/coverage.xml
-            -Dsonar.test.exclusions=delfin/tests/**
-            -Dsonar.verbose=false
       - uses: jpmcb/prow-github-actions@v1.1.3
         with:
           prow-commands: '/assign 
