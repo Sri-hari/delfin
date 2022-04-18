@@ -30,7 +30,7 @@ jobs:
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
-          SONAR_TOKEN: 25a61c169b0131a0ae98781dbf558c1ef66a46e9
+          SONAR_TOKEN: c6a1ff632d5d73b5fe921263c6f2bd212936de30
           SONAR_HOST_URL: https://sonarcloud.io
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
