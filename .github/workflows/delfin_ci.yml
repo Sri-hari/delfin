@@ -30,27 +30,5 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: c6a1ff632d5d73b5fe921263c6f2bd212936de30
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: jpmcb/prow-github-actions@v1.1.3
-        with:
-          prow-commands: '/assign 
-            /unassign 
-            /approve 
-            /retitle 
-            /area 
-            /kind 
-            /priority 
-            /remove 
-            /lgtm 
-            /close 
-            /reopen 
-            /lock 
-            /milestone 
-            /hold 
-            /cc 
-            /uncc'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - uses: actions/labeler@main
-        with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
